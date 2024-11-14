@@ -2,6 +2,10 @@ use std::collections::HashMap;
 
 #[cfg(feature = "common-password")]
 #[derive(Debug, Clone, PartialEq)]
+#[cfg_attr(
+    feature = "serde",
+    derive(serde::Serialize,serde::Deserialize),
+)]
 /// The struct of an analysis.
 pub struct AnalyzedPassword {
     password:                String,
@@ -20,6 +24,10 @@ pub struct AnalyzedPassword {
 
 #[cfg(not(feature = "common-password"))]
 #[derive(Debug, Clone, PartialEq)]
+#[cfg_attr(
+    feature = "serde",
+    derive(serde::Serialize,serde::Deserialize),
+)]
 /// The struct of an analysis.
 pub struct AnalyzedPassword {
     password:                String,
