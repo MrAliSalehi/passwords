@@ -1,11 +1,13 @@
 use std::collections::HashMap;
+use ts_rs::TS;
 
 #[cfg(feature = "common-password")]
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq,TS)]
 #[cfg_attr(
     feature = "serde",
     derive(serde::Serialize,serde::Deserialize),
 )]
+#[ts(export,export_to="analyzed_password.ts")]
 /// The struct of an analysis.
 pub struct AnalyzedPassword {
     password:                String,

@@ -19,7 +19,7 @@ md5 = { version = "0.7", optional = true }
 base64 = { version = "0.21", optional = true }
 bcrypt = { version = "0.15", optional = true }
 serde = { version = "1.0.215", features = ["derive"], optional = true }
-
+ts-rs = { version = "10.0.0", features = ["serde_json", "serde-json-impl", "chrono"] }
 [dev-dependencies]
 regex = "1"
 assert-eq-float = "0.1"
